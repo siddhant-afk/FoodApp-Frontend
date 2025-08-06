@@ -41,7 +41,7 @@ nav {
 
   font-size: 16px;
 
-  @apply px-8 py-2 rounded font-semibold;
+  @apply px-8 py-2 rounded font-semibold text-slate-800;
 }
 
 .nav-link:hover {

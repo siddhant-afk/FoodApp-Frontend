@@ -1,1 +1,74 @@
 @import "tailwindcss";
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+nav {
+  padding: 16px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 16px; */
+
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 900; /* Corrected property name */
+  flex-shrink: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.logo-link {
+  color: #51cf66;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.desktop-nav {
+  display: flex;
+  flex: 1;
+  /* gap: 24px; */
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-link {
+  text-decoration: none;
+
+  font-size: 16px;
+
+  @apply px-8 py-2 rounded font-semibold;
+}
+
+.nav-link:hover {
+  @apply bg-zinc-100;
+}
+
+.nav-button {
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 16px;
+
+  cursor: pointer;
+}
+/* 
+.nav-button:hover {
+  color: #51cf66;
+} */
+
+.nav-center {
+  flex: 1;
+  justify-content: center;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}

@@ -1,9 +1,9 @@
 import "./App.css";
-
+import Navbar from "./components/common/Navbar";
 function App() {
   return (
     <>
-      <h1 className=" text-xl">Hello World</h1>
+      <Navbar />
     </>
   );
 }

@@ -5,6 +5,7 @@ body {
 }
 
 nav {
+  background-color: white;
   padding: 16px 48px;
   display: flex;
   align-items: center;
@@ -101,4 +102,323 @@ nav {
 
 .footer-link:hover {
   @apply hover:text-green-600;
+}
+
+/**ERROR STYLING*/
+.error-display {
+  margin-top: 1rem;
+  z-index: 1000;
+  width: 90%;
+  max-width: 500px;
+  animation: fadeInDown 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  opacity: 0.9;
+  /* Slightly transparent for better readability */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+}
+
+.error-content {
+  background: #fff;
+  color: #d32f2f;
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-left: 4px solid #d32f2f;
+}
+
+.error-message {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.success {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #ff6600;
+  color: green;
+}
+
+/* Progress Bar Animation */
+.error-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: rgba(211, 47, 47, 0.2);
+  animation: progressBar 5s linear forwards;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(
+      -30px
+    ); /* Adjusted transform for non-fixed positioning */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes progressBar {
+  from {
+    width: 100%;
+    background: #d32f2f;
+  }
+
+  to {
+    width: 0%;
+    background: #d32f2f;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .error-display {
+    width: 95%;
+  }
+
+  .error-content {
+    padding: 12px 16px;
+  }
+
+  .error-message {
+    font-size: 14px;
+  }
+}
+
+/** REGISTRATION PAGE*/
+.register-page-food {
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-family: "Arial", sans-serif;
+}
+
+.register-card-food {
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background-color: #fff;
+  border: none;
+}
+
+.register-header-food {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.register-title-food {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  color: #ff6600;
+}
+
+.register-description-food {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.register-content-food {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.register-form-food {
+  margin-top: 1rem;
+}
+
+.register-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.register-label-food {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.register-input-food {
+  display: block;
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+  border: 2px solid #ddd;
+  outline: none;
+  background-color: #f8f8f8;
+  color: #333;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.register-input-food:focus {
+  border-color: #ff6600;
+  box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.15);
+}
+
+.register-button-food {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.1s ease,
+    box-shadow 0.3s ease-in-out;
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.register-button-food:hover {
+  background-color: #e55d00;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.register-button-food:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.register-alert-food {
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-width: 2px;
+}
+
+.register-alert-error-food {
+  background-color: #ffebee;
+  border-color: #ffcdd2;
+  color: #d32f2f;
+}
+
+.register-alert-success-food {
+  background-color: #f1fefb;
+  border-color: #66bb6a;
+  color: #2e7d32;
+}
+
+.register-alert-title-food {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.register-alert-description-food {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.register-link-food {
+  color: #007bff;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+}
+
+.register-link-food:hover {
+  text-decoration: underline;
+}
+
+.register-separator-food {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.register-separator-text-food {
+  background-color: #fff;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.register-social-food {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.register-social-buttons-food {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.register-social-button-food {
+  flex: 1;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.1s ease, box-shadow 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.register-social-button-food:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.register-social-button-food:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.register-social-google-food {
+  color: #db4437;
+  background-color: #fff;
+}
+
+.register-social-facebook-food {
+  color: #1877f2;
+  background-color: #fff;
+}
+
+.register-social-github-food {
+  color: #000;
+  background-color: #fff;
+}
+.already {
+  margin-top: 1rem;
+  text-align: center;
 }

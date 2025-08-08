@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
 const ErrorDisplay = ({ message, onDismiss }) => {
   useEffect(() => {
@@ -15,6 +15,7 @@ const ErrorDisplay = ({ message, onDismiss }) => {
     <div className="error-display">
       <div className="error-content">
         <span className="error-message">{message}</span>
+
         <div className="error-progress"></div>
       </div>
     </div>
@@ -33,9 +34,10 @@ export const useError = () => {
   };
 
   return {
-    ErrorDisplay: () => {
-      <ErrorDisplay message={errorMessage} onDismiss={dismissError} />;
-    },
+    ErrorDisplay: () => (
+      <ErrorDisplay message={errorMessage} onDismiss={dismissError} />
+    ),
+
     showError,
     dismissError,
   };

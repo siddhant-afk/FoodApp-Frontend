@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>&copy; {new Date().getFullYear} Zafto. All Rights Reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Zafto. All Rights Reserved.</p>
         <div className="footer-links">
           <a href="#" className="footer-link">
             Terms of Service

@@ -10,7 +10,7 @@ export default class ApiService {
   }
 
   static getToken() {
-    localStorage.getItem("token");
+    return localStorage.getItem("token");
   }
 
   // USER ROLES
@@ -50,6 +50,7 @@ export default class ApiService {
 
   static isAuthenticated() {
     const token = this.getToken();
+
     return !!token;
   }
 

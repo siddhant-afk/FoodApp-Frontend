@@ -516,3 +516,227 @@ nav {
   font-size: 1rem;
   line-height: 1.5;
 }
+
+/**HOME PAGE*/
+.home-page {
+  padding: 0;
+  margin: 0;
+  background-color: #f0f4f8; /* A slightly softer background color */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+}
+
+.home-hero-section {
+  background-image: linear-gradient(#51cf66, #39cd52);
+  color: white;
+
+  text-align: center;
+  padding: 8rem 2rem; /* Increased padding for a more spacious feel */
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.home-hero-content {
+  max-width: 800px; /* Increased max-width for larger screens */
+  margin: 0 auto; /* Center the content within the section */
+}
+
+.home-hero-title {
+  font-size: 3.5rem; /* Larger title */
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
+
+.home-hero-subtitle {
+  font-size: 1.8rem; /* Larger subtitle */
+  margin-bottom: 2.5rem; /* Increased margin */
+  line-height: 1.7; /* Improved line height for better readability */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.home-explore-button {
+  padding: 1.2rem 3rem; /* Increased padding */
+  font-size: 1.5rem; /* Larger font size */
+  cursor: pointer;
+  @apply bg-white text-black rounded-xl hover:bg-zinc-100;
+}
+
+.home-featured-categories {
+  padding: 6rem 2rem; /* Increased padding */
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.home-section-title {
+  font-size: 2.8rem; /* Larger title */
+  font-weight: bold;
+  color: #222; /* Darker heading color */
+  margin-bottom: 3rem; /* Increased margin */
+  letter-spacing: -0.02em;
+}
+
+.home-category-carousel {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 2rem; /* Add padding at the bottom for scrollbar */
+  scroll-snap-type: x mandatory; /* Enable scroll snapping */
+  gap: 2rem;
+  justify-content: center;
+}
+
+.home-category-carousel::-webkit-scrollbar {
+  height: 10px; /* Adjust scrollbar height */
+}
+
+.home-category-carousel::-webkit-scrollbar-track {
+  background: #f1f3f5; /* Lighter scrollbar track */
+  border-radius: 10px;
+}
+
+.home-category-carousel::-webkit-scrollbar-thumb {
+  background: #51cf66; /* A brighter shade of orange */
+  border-radius: 10px;
+  border: 2px solid #f1f3f5; /* Add a border */
+}
+
+.home-category-carousel::-webkit-scrollbar-thumb:hover {
+  background: #51cf66; /* Original orange on hover */
+}
+
+.home-category-card {
+  flex: 0 0 280px; /* Increased width of each card */
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+  padding: 2rem; /* Increased padding */
+  text-align: center;
+
+  cursor: pointer;
+  scroll-snap-align: start; /* Make each card snap to the start */
+}
+
+.home-category-card:hover {
+  background: linear-gradient(135deg, #dcfce7, #f0fdf4);
+}
+
+.home-category-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.home-category-description {
+  font-size: 1.1rem;
+  color: #444; /* Slightly darker description */
+  line-height: 1.7; /* Improved line height */
+}
+
+.home-call-to-action {
+  background-color: #f9f9f9; /* A very light gray background */
+  padding: 6rem 2rem; /* Increased padding */
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.home-cta-content {
+  max-width: 700px; /* Increased max width */
+  margin: 0 auto;
+}
+
+.home-cta-title {
+  font-size: 2.5rem; /* Larger title */
+  font-weight: bold;
+  color: #222; /* Dark heading color */
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.home-cta-text {
+  font-size: 1.3rem; /* Larger text */
+  color: #555;
+  line-height: 1.7; /* Improved line height */
+  margin-bottom: 2.5rem; /* Increased margin */
+}
+
+.home-order-now-button {
+  padding: 1.2rem 3rem; /* Increased padding */
+  font-size: 1.5rem;
+  background-color: #51cf66;
+  color: white;
+  border: none;
+  border-radius: 0.75rem; /* More rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  font-weight: 600;
+}
+
+.home-order-now-button:hover {
+  @apply bg-green-600;
+
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home-hero-title {
+    font-size: 3rem; /* Adjusted for smaller screens */
+  }
+  .home-hero-subtitle {
+    font-size: 1.4rem;
+  }
+  .home-section-title {
+    font-size: 2.2rem;
+  }
+  .home-cta-title {
+    font-size: 2.2rem;
+  }
+  .home-category-card {
+    flex: 0 0 90%; /* Make cards take up almost full width on small screens */
+    margin-right: 0;
+    scroll-snap-align: center;
+  }
+  .home-category-carousel {
+    gap: 1rem;
+  }
+  .home-explore-button,
+  .home-order-now-button {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+  }
+  .home-cta-text {
+    font-size: 1.2rem;
+  }
+}
+
+/* For very small screens (e.g., phones) */
+@media (max-width: 480px) {
+  .home-hero-title {
+    font-size: 2.5rem;
+  }
+  .home-hero-subtitle {
+    font-size: 1.2rem;
+  }
+  .home-section-title {
+    font-size: 2rem;
+  }
+  .home-cta-title {
+    font-size: 2rem;
+  }
+  .home-explore-button,
+  .home-order-now-button {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+  .home-cta-text {
+    font-size: 1rem;
+  }
+}
